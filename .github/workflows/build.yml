@@ -32,6 +32,7 @@ jobs:
         with:
           name: binary
           path: deno-compile/
+      - run: ls -lR
       - name: Create release on GitHub
         id: create-release
         uses: actions/create-release@latest
