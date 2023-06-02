@@ -31,7 +31,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: binary
-          path: deno-compile
+          path: deno-compile/
       - name: Create release on GitHub
         id: create-release
         uses: actions/create-release@latest
