@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "main": "deno run --allow-env --allow-read --allow-sys textlint.ts",
+    "compile": "deno compile --allow-env --allow-read --allow-sys textlint.ts"
+  }
+}
+
