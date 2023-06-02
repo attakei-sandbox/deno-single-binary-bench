@@ -31,8 +31,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: binary
-          path: deno-compile/
-      - run: ls -lR
+          path: deno-compile/textlint
       - name: Create release on GitHub
         id: create-release
         uses: actions/create-release@latest
