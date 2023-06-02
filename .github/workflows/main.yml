@@ -1,0 +1,16 @@
+on: push
+
+
+jobs:
+  deno-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: 'v1.34'
+      - name: Test by deno run command
+        continue-on-error: true
+        run: |
+          cd deno
+          deno task main ../examples/
