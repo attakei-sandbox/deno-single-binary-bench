@@ -36,4 +36,5 @@ jobs:
         run: |
           cd deno-compile
           curl -Lo textlint https://github.com/attakei-sandbox/deno-single-binary-bench/releases/download/v0.0.7/textlint
+          chmod +x textlint
           ./textlint ../examples/
