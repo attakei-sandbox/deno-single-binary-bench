@@ -1,7 +1,6 @@
 on:
   push:
-  dispatch_workflow:
-
+  workflow_dispatch:
 
 jobs:
   nodejs-run:
