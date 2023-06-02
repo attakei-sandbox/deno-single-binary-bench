@@ -9,7 +9,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '18'
-      - name: Test by deno run command
+      - name: Run test
         continue-on-error: true
         run: |
           cd nodejs
@@ -22,7 +22,7 @@ jobs:
       - uses: denoland/setup-deno@v1
         with:
           deno-version: 'v1.34'
-      - name: Test by deno run command
+      - name: Run test
         continue-on-error: true
         run: |
           cd deno
@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Test by deno run command
+      - name: Run test
         continue-on-error: true
         run: |
           cd deno-compile
