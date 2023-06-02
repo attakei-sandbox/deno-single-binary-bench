@@ -14,3 +14,13 @@ jobs:
         run: |
           cd deno
           deno task main ../examples/
+  deno-compile-run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Test by deno run command
+        continue-on-error: true
+        run: |
+          cd deno-compile
+          wget https://github.com/attakei-sandbox/deno-single-binary-bench/releases/download/v0.0.7/textlint
+          ./textlint ../examples/
