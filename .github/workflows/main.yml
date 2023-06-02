@@ -35,5 +35,5 @@ jobs:
         continue-on-error: true
         run: |
           cd deno-compile
-          wget https://github.com/attakei-sandbox/deno-single-binary-bench/releases/download/v0.0.7/textlint
+          curl -L -p textlint https://github.com/attakei-sandbox/deno-single-binary-bench/releases/download/v0.0.7/textlint
           ./textlint ../examples/
