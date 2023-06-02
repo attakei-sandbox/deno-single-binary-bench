@@ -16,7 +16,8 @@ jobs:
         run: |
           cd deno
           deno task compile
-          mv textlint ../deno-compile
+          mv textlint ../deno-compile/
+          chmod +x ../deno-compile/textlint
       - uses: actions/upload-artifact@v3
         with:
           name: binary
@@ -31,7 +32,7 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: binary
-          path: deno-compile/textlint
+          path: deno-compile
       - name: Create release on GitHub
         id: create-release
         uses: actions/create-release@latest
